@@ -13,10 +13,10 @@
   - [x] Install SQL client (DB Browser for SQLite) ⚠️ (SQLite3 available through Python)
   - [x] Test all installations ✅
 
-- [ ] **Repository Setup**
-  - [ ] Create GitHub repository: "DSA_2040_Practical_Exam_[YourName_LastThreeDigitsID]"
-  - [ ] Clone repository locally
-  - [ ] Create project structure
+- [x] **Repository Setup**
+  - [x] Create GitHub repository: "DSA_2040_Practical_Exam_[YourName_LastThreeDigitsID]" ✅
+  - [x] Clone repository locally ✅
+  - [x] Create project structure ✅
 
 ---
 
