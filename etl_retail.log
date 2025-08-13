@@ -1,0 +1,86 @@
+2025-08-13 17:02:24,960 - INFO - Starting full ETL pipeline
+2025-08-13 17:02:24,960 - INFO - === EXTRACT PHASE ===
+2025-08-13 17:02:24,960 - INFO - No CSV file provided, generating synthetic data
+2025-08-13 17:02:24,960 - INFO - Generating 1000 synthetic retail records
+2025-08-13 17:02:24,981 - INFO - Generated 1000 synthetic records
+2025-08-13 17:02:24,981 - INFO - Extraction completed: 1000 records
+2025-08-13 17:02:24,988 - INFO - Extracted 1000 records
+2025-08-13 17:02:24,988 - INFO - === TRANSFORM PHASE ===
+2025-08-13 17:02:24,988 - INFO - Starting data transformation
+2025-08-13 17:02:24,990 - INFO - Calculated TotalSales column
+2025-08-13 17:02:24,991 - INFO - Removed 0 outlier records
+2025-08-13 17:02:24,991 - INFO - Filtered to last year: 541 records
+2025-08-13 17:02:24,993 - INFO - Handled missing values: 0 values removed
+2025-08-13 17:02:24,998 - INFO - Created customer dimension with 99 customers
+2025-08-13 17:02:25,011 - INFO - Created time dimension with 13 time periods
+2025-08-13 17:02:25,014 - INFO - Created product dimension with 524 products
+2025-08-13 17:02:25,022 - INFO - Created location dimension with 10 countries
+2025-08-13 17:02:25,022 - INFO - Transformation completed: 541 records
+2025-08-13 17:02:25,022 - INFO - Transformed 541 records
+2025-08-13 17:02:25,022 - INFO - === LOAD PHASE ===
+2025-08-13 17:02:25,022 - INFO - Starting database load process
+2025-08-13 17:02:25,022 - ERROR - Error during database load: unable to open database file
+2025-08-13 17:02:25,022 - ERROR - ETL pipeline failed: unable to open database file
+2025-08-13 17:02:25,022 - ERROR - Main execution failed: unable to open database file
+2025-08-13 17:02:55,871 - INFO - Starting full ETL pipeline
+2025-08-13 17:02:55,872 - INFO - === EXTRACT PHASE ===
+2025-08-13 17:02:55,872 - INFO - No CSV file provided, generating synthetic data
+2025-08-13 17:02:55,872 - INFO - Generating 1000 synthetic retail records
+2025-08-13 17:02:55,880 - INFO - Generated 1000 synthetic records
+2025-08-13 17:02:55,883 - INFO - Extraction completed: 1000 records
+2025-08-13 17:02:55,883 - INFO - Extracted 1000 records
+2025-08-13 17:02:55,885 - INFO - === TRANSFORM PHASE ===
+2025-08-13 17:02:55,885 - INFO - Starting data transformation
+2025-08-13 17:02:55,886 - INFO - Calculated TotalSales column
+2025-08-13 17:02:55,886 - INFO - Removed 0 outlier records
+2025-08-13 17:02:55,888 - INFO - Filtered to last year: 541 records
+2025-08-13 17:02:55,889 - INFO - Handled missing values: 0 values removed
+2025-08-13 17:02:55,892 - INFO - Created customer dimension with 99 customers
+2025-08-13 17:02:55,897 - INFO - Created time dimension with 13 time periods
+2025-08-13 17:02:55,901 - INFO - Created product dimension with 524 products
+2025-08-13 17:02:55,903 - INFO - Created location dimension with 10 countries
+2025-08-13 17:02:55,903 - INFO - Transformation completed: 541 records
+2025-08-13 17:02:55,903 - INFO - Transformed 541 records
+2025-08-13 17:02:55,904 - INFO - === LOAD PHASE ===
+2025-08-13 17:02:55,904 - INFO - Starting database load process
+2025-08-13 17:02:55,905 - ERROR - Error during database load: [Errno 2] No such file or directory: '../sql/create_tables.sql'
+2025-08-13 17:02:55,905 - ERROR - ETL pipeline failed: [Errno 2] No such file or directory: '../sql/create_tables.sql'
+2025-08-13 17:02:55,905 - ERROR - Main execution failed: [Errno 2] No such file or directory: '../sql/create_tables.sql'
+2025-08-13 17:03:10,242 - INFO - Starting full ETL pipeline
+2025-08-13 17:03:10,243 - INFO - === EXTRACT PHASE ===
+2025-08-13 17:03:10,243 - INFO - No CSV file provided, generating synthetic data
+2025-08-13 17:03:10,244 - INFO - Generating 1000 synthetic retail records
+2025-08-13 17:03:10,250 - INFO - Generated 1000 synthetic records
+2025-08-13 17:03:10,253 - INFO - Extraction completed: 1000 records
+2025-08-13 17:03:10,253 - INFO - Extracted 1000 records
+2025-08-13 17:03:10,254 - INFO - === TRANSFORM PHASE ===
+2025-08-13 17:03:10,254 - INFO - Starting data transformation
+2025-08-13 17:03:10,255 - INFO - Calculated TotalSales column
+2025-08-13 17:03:10,256 - INFO - Removed 0 outlier records
+2025-08-13 17:03:10,257 - INFO - Filtered to last year: 541 records
+2025-08-13 17:03:10,259 - INFO - Handled missing values: 0 values removed
+2025-08-13 17:03:10,262 - INFO - Created customer dimension with 99 customers
+2025-08-13 17:03:10,268 - INFO - Created time dimension with 13 time periods
+2025-08-13 17:03:10,275 - INFO - Created product dimension with 524 products
+2025-08-13 17:03:10,278 - INFO - Created location dimension with 10 countries
+2025-08-13 17:03:10,278 - INFO - Transformation completed: 541 records
+2025-08-13 17:03:10,278 - INFO - Transformed 541 records
+2025-08-13 17:03:10,278 - INFO - === LOAD PHASE ===
+2025-08-13 17:03:10,278 - INFO - Starting database load process
+2025-08-13 17:03:10,372 - INFO - Database schema created successfully
+2025-08-13 17:03:10,396 - INFO - Loaded 99 customer records
+2025-08-13 17:03:10,416 - INFO - Loaded 13 time records
+2025-08-13 17:03:10,442 - INFO - Loaded 524 product records
+2025-08-13 17:03:10,458 - INFO - Loaded 10 location records
+2025-08-13 17:03:10,509 - INFO - Loaded 541 sales fact records
+2025-08-13 17:03:10,509 - INFO - Database load completed successfully
+2025-08-13 17:03:10,509 - INFO - Data loaded to database successfully
+2025-08-13 17:03:10,509 - INFO - === ETL SUMMARY ===
+2025-08-13 17:03:10,509 - INFO - Raw data records: 1000
+2025-08-13 17:03:10,509 - INFO - Transformed records: 541
+2025-08-13 17:03:10,509 - INFO - Customer dimension: 99 records
+2025-08-13 17:03:10,509 - INFO - Product dimension: 524 records
+2025-08-13 17:03:10,509 - INFO - Time dimension: 13 records
+2025-08-13 17:03:10,509 - INFO - Location dimension: 10 records
+2025-08-13 17:03:10,509 - INFO - ETL pipeline completed successfully!
+2025-08-13 17:03:10,522 - ERROR - Main execution failed: Cannot save file into a non-existent directory: '..\data'
