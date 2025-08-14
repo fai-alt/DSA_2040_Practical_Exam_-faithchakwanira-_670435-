@@ -169,6 +169,15 @@ DATAMININGENDSEM/
   - [x] Boxplots for outlier detection
   - [x] Histograms for distribution analysis
 
+
+<img width="842" height="748" alt="image" src="https://github.com/user-attachments/assets/d0a5aa65-f5cd-4ad3-a886-18e8cc8a948c" />
+
+
+
+
+
+
+
 - [x] **Data Splitting 
   - [x] Train/test split (80/20 implementation
   - [x] Reproducible results with random seeds
