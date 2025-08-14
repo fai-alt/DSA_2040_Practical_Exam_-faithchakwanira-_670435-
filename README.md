@@ -171,6 +171,7 @@ DATAMININGENDSEM/
 
 
 <img width="842" height="748" alt="image" src="https://github.com/user-attachments/assets/d0a5aa65-f5cd-4ad3-a886-18e8cc8a948c" />
+<img width="1476" height="905" alt="image" src="https://github.com/user-attachments/assets/b014fbe6-3fee-4387-ad6d-f9532c3a970f" />
 
 
 
