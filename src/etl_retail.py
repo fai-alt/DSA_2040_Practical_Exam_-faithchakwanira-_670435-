@@ -238,7 +238,7 @@ class RetailETL:
             cursor = conn.cursor()
             
             # Read and execute SQL schema
-            with open('sql/create_tables.sql', 'r') as f:
+            with open('../sql/create_tables.sql', 'r') as f:
                 sql_script = f.read()
                 cursor.executescript(sql_script)
             
@@ -246,44 +246,77 @@ class RetailETL:
             
             # Load customer dimension
             if self.customer_dim is not None:
-                self.customer_dim.to_sql('CustomerDim', conn, if_exists='replace', index=False)
-                logger.info(f"Loaded {len(self.customer_dim)} customer records")
+                # Prepare customer dimension data
+                customer_data = []
+                for idx, row in self.customer_dim.iterrows():
+                    customer_data.append({
+                        'CustomerID': row['CustomerID'],
+                        'CustomerName': f"Customer_{row['CustomerID']}",
+                        'CustomerSegment': 'Standard',
+                        'Country': row['Country'],
+                        'Region': 'Europe',
+                        'CustomerType': 'Individual'
+                    })
+                
+                customer_df = pd.DataFrame(customer_data)
+                customer_df.to_sql('CustomerDim', conn, if_exists='replace', index=False)
+                logger.info(f"Loaded {len(customer_df)} customer records")
             
             # Load time dimension
             if self.time_dim is not None:
                 # Create proper time dimension with TimeID
-                time_dim_with_id = self.time_dim.copy()
-                time_dim_with_id['TimeID'] = range(1, len(time_dim_with_id) + 1)
-                time_dim_with_id['Date'] = pd.to_datetime(time_dim_with_id[['Year', 'Month']].assign(day=1))
-                time_dim_with_id['FiscalYear'] = time_dim_with_id['Year'].astype(str)
-                time_dim_with_id['IsHoliday'] = False  # Simplified
+                time_data = []
+                for idx, row in self.time_dim.iterrows():
+                    date_obj = pd.to_datetime(f"{row['Year']}-{row['Month']:02d}-01")
+                    time_data.append({
+                        'TimeID': idx + 1,
+                        'InvoiceDate': date_obj,
+                        'Year': row['Year'],
+                        'Quarter': row['Quarter'],
+                        'Month': row['Month'],
+                        'MonthName': date_obj.strftime('%B'),
+                        'DayOfWeek': date_obj.weekday(),
+                        'DayName': date_obj.strftime('%A'),
+                        'IsWeekend': date_obj.weekday() >= 5
+                    })
                 
-                time_dim_with_id.to_sql('TimeDim', conn, if_exists='replace', index=False)
-                logger.info(f"Loaded {len(time_dim_with_id)} time records")
+                time_df = pd.DataFrame(time_data)
+                time_df.to_sql('TimeDim', conn, if_exists='replace', index=False)
+                logger.info(f"Loaded {len(time_df)} time records")
             
             # Load product dimension
             if self.product_dim is not None:
                 # Create proper product dimension with ProductID
-                product_dim_with_id = self.product_dim.copy()
-                product_dim_with_id['ProductID'] = range(1, len(product_dim_with_id) + 1)
-                product_dim_with_id['Brand'] = 'Generic'
-                product_dim_with_id['Cost'] = product_dim_with_id['UnitPrice'] * 0.6  # Simplified cost
-                product_dim_with_id['Supplier'] = 'Default Supplier'
+                product_data = []
+                for idx, row in self.product_dim.iterrows():
+                    product_data.append({
+                        'ProductID': idx + 1,
+                        'StockCode': row['StockCode'],
+                        'Description': row['Description'],
+                        'Category': 'General',
+                        'Subcategory': 'Standard',
+                        'Brand': 'Generic'
+                    })
                 
-                product_dim_with_id.to_sql('ProductDim', conn, if_exists='replace', index=False)
-                logger.info(f"Loaded {len(product_dim_with_id)} product records")
+                product_df = pd.DataFrame(product_data)
+                product_df.to_sql('ProductDim', conn, if_exists='replace', index=False)
+                logger.info(f"Loaded {len(product_df)} product records")
             
             # Load location dimension
             if self.location_dim is not None:
                 # Create proper location dimension with LocationID
-                location_dim_with_id = self.location_dim.copy()
-                location_dim_with_id['LocationID'] = range(1, len(location_dim_with_id) + 1)
-                location_dim_with_id['City'] = 'Capital'  # Simplified
-                location_dim_with_id['Population'] = 1000000  # Simplified
-                location_dim_with_id['GDP'] = 1000000000  # Simplified
+                location_data = []
+                for idx, row in self.location_dim.iterrows():
+                    location_data.append({
+                        'LocationID': idx + 1,
+                        'Country': row['Country'],
+                        'Region': 'Europe',
+                        'City': 'Capital'
+                    })
                 
-                location_dim_with_id.to_sql('LocationDim', conn, if_exists='replace', index=False)
-                logger.info(f"Loaded {len(location_dim_with_id)} location records")
+                location_df = pd.DataFrame(location_data)
+                location_df.to_sql('LocationDim', conn, if_exists='replace', index=False)
+                logger.info(f"Loaded {len(location_df)} location records")
             
             # Load sales fact table
             if self.transformed_data is not None:
@@ -292,7 +325,7 @@ class RetailETL:
                 for idx, row in self.transformed_data.iterrows():
                     # Find corresponding dimension IDs
                     customer_id = row['CustomerID']
-                    product_id = row['StockCode']
+                    product_id = 1  # Simplified mapping
                     time_id = 1  # Simplified mapping
                     location_id = 1  # Simplified mapping
                     
@@ -304,9 +337,7 @@ class RetailETL:
                         'InvoiceNo': row['InvoiceNo'],
                         'Quantity': row['Quantity'],
                         'UnitPrice': row['UnitPrice'],
-                        'TotalSales': row['TotalSales'],
-                        'Discount': 0.0,  # Simplified
-                        'NetSales': row['TotalSales']
+                        'TotalSales': row['TotalSales']
                     })
                 
                 fact_df = pd.DataFrame(fact_records)

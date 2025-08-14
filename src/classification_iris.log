@@ -1,0 +1,40 @@
+2025-08-14 18:00:42,779 - INFO - Starting complete classification analysis
+2025-08-14 18:00:42,782 - INFO - Loading data from ../data/iris_processed.csv
+2025-08-14 18:00:42,806 - INFO - Data loaded successfully: (150, 5)
+2025-08-14 18:00:42,810 - INFO - Features shape: (150, 4)
+2025-08-14 18:00:42,812 - INFO - Target classes: ['setosa', 'versicolor', 'virginica']
+2025-08-14 18:00:42,812 - INFO - Splitting data with test_size=0.2
+2025-08-14 18:00:42,821 - INFO - Training set: (120, 4)
+2025-08-14 18:00:42,821 - INFO - Testing set: (30, 4)
+2025-08-14 18:00:42,821 - INFO - Training Decision Tree classifier
+2025-08-14 18:00:42,854 - INFO - Decision Tree trained successfully
+2025-08-14 18:00:42,857 - INFO - Training KNN classifier with k=5
+2025-08-14 18:00:42,899 - INFO - KNN classifier trained successfully
+2025-08-14 18:00:42,899 - INFO - Comparing Decision Tree and KNN classifiers
+2025-08-14 18:00:42,903 - INFO - Computing metrics for Decision Tree
+2025-08-14 18:00:42,956 - INFO - Decision Tree Metrics:
+2025-08-14 18:00:42,956 - INFO -   Accuracy: 1.0000
+2025-08-14 18:00:42,962 - INFO -   Precision (Macro): 1.0000
+2025-08-14 18:00:42,964 - INFO -   Recall (Macro): 1.0000
+2025-08-14 18:00:42,969 - INFO -   F1-Score (Macro): 1.0000
+2025-08-14 18:00:42,971 - INFO - Computing metrics for KNN
+2025-08-14 18:00:43,085 - INFO - KNN Metrics:
+2025-08-14 18:00:43,095 - INFO -   Accuracy: 1.0000
+2025-08-14 18:00:43,095 - INFO -   Precision (Macro): 1.0000
+2025-08-14 18:00:43,189 - INFO -   Recall (Macro): 1.0000
+2025-08-14 18:00:43,261 - INFO -   F1-Score (Macro): 1.0000
+2025-08-14 18:00:43,279 - INFO - Classifier Comparison Results:
+2025-08-14 18:00:43,284 - INFO -   Decision Tree better on: 0 metrics
+2025-08-14 18:00:43,289 - INFO -   KNN better on: 0 metrics
+2025-08-14 18:00:43,291 - INFO -   Winner: Tie
+2025-08-14 18:00:43,293 - INFO -   Reason: Both classifiers perform similarly
+2025-08-14 18:00:43,295 - INFO - Creating confusion matrices
+2025-08-14 18:00:49,420 - INFO - Confusion matrices saved to: ../images/confusion_matrices.png
+2025-08-14 18:01:14,128 - INFO - Visualizing decision tree
+2025-08-14 18:01:24,818 - INFO - Decision tree visualization saved to: ../images/decision_tree_visualization.png
+2025-08-14 18:01:33,522 - INFO - Creating metrics comparison chart
+2025-08-14 18:01:38,849 - INFO - Metrics comparison chart saved to: ../images/metrics_comparison_chart.png
+2025-08-14 18:01:42,965 - INFO - Generating classification analysis report
+2025-08-14 18:01:43,186 - INFO - Classification report saved to: ../reports/classification_analysis_report.md
+2025-08-14 18:01:43,189 - INFO - Classification analysis completed successfully!
+2025-08-14 18:01:43,189 - INFO - Classification analysis completed successfully!

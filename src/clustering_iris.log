@@ -1,0 +1,61 @@
+2025-08-14 17:55:57,121 - INFO - Starting full clustering analysis
+2025-08-14 17:55:57,121 - INFO - === DATA LOADING ===
+2025-08-14 17:55:57,136 - INFO - Loading data from ../data/iris_processed.csv
+2025-08-14 17:55:57,157 - INFO - Data loaded successfully: (150, 5)
+2025-08-14 17:55:57,175 - INFO - Features shape: (150, 4)
+2025-08-14 17:55:57,190 - INFO - Target classes: ['setosa', 'versicolor', 'virginica']
+2025-08-14 17:55:57,190 - INFO - === K-MEANS CLUSTERING ===
+2025-08-14 17:55:57,192 - INFO - Applying K-Means clustering with k=3
+2025-08-14 17:56:09,116 - INFO - K-Means clustering completed with k=3
+2025-08-14 17:56:09,118 - INFO - Cluster centers shape: (3, 4)
+2025-08-14 17:56:09,118 - INFO - Cluster labels shape: (150,)
+2025-08-14 17:56:09,118 - INFO - === CLUSTERING EVALUATION ===
+2025-08-14 17:56:09,118 - INFO - Evaluating clustering quality
+2025-08-14 17:56:09,137 - INFO - Adjusted Rand Index: 0.9799
+2025-08-14 17:56:09,158 - INFO - Silhouette Score: 0.4714
+2025-08-14 17:56:09,162 - INFO - Inertia: 7.0116
+2025-08-14 17:56:09,164 - INFO - Number of iterations: 4
+2025-08-14 17:56:09,165 - INFO - Cluster sizes: {0: 51, 1: 50, 2: 49}
+2025-08-14 17:56:09,169 - INFO - Actual species distribution: {'setosa': 50, 'versicolor': 50, 'virginica': 50}
+2025-08-14 17:56:09,170 - INFO - === K-VALUE EXPERIMENTATION ===
+2025-08-14 17:56:09,171 - INFO - Experimenting with k values: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+2025-08-14 17:56:09,177 - INFO - Testing k=2
+2025-08-14 17:56:09,317 - INFO - Testing k=3
+2025-08-14 17:56:09,466 - INFO - Testing k=4
+2025-08-14 17:56:09,583 - INFO - Testing k=5
+2025-08-14 17:56:09,716 - INFO - Testing k=6
+2025-08-14 17:56:09,856 - INFO - Testing k=7
+2025-08-14 17:56:09,997 - INFO - Testing k=8
+2025-08-14 17:56:10,108 - INFO - Testing k=9
+2025-08-14 17:56:10,248 - INFO - Testing k=10
+2025-08-14 17:56:10,365 - INFO - K-value experimentation completed
+2025-08-14 17:56:10,418 - INFO - Results:
+    k    Inertia  Silhouette_Score  ARI_Score
+0   2  10.470837          0.636162        NaN
+1   3   7.011585          0.471403   0.979932
+2   4   6.015676          0.437861        NaN
+3   5   5.297893          0.304644        NaN
+4   6   4.748775          0.257533        NaN
+5   7   4.386968          0.253326        NaN
+6   8   4.066262          0.245545        NaN
+7   9   3.720650          0.257536        NaN
+8  10   3.464203          0.271636        NaN
+2025-08-14 17:56:10,432 - INFO - === ELBOW CURVE CREATION ===
+2025-08-14 17:56:10,433 - INFO - Creating elbow curve visualization
+2025-08-14 17:56:52,040 - INFO - Elbow curve visualization created and saved
+2025-08-14 17:56:52,040 - INFO - === CLUSTER VISUALIZATION ===
+2025-08-14 17:56:52,051 - INFO - Creating cluster visualizations for k=3
+2025-08-14 17:57:00,149 - INFO - Cluster visualizations created and saved for k=3
+2025-08-14 17:57:00,149 - INFO - === RESULTS ANALYSIS ===
+2025-08-14 17:57:00,149 - INFO - Analyzing clustering results
+2025-08-14 17:57:00,155 - INFO - Analysis report generated and saved
+2025-08-14 17:57:00,157 - INFO - === CLUSTERING ANALYSIS SUMMARY ===
+2025-08-14 17:57:00,159 - INFO - Dataset: (150, 5)
+2025-08-14 17:57:00,159 - INFO - Features: ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+2025-08-14 17:57:00,159 - INFO - Primary clustering: k=3
+2025-08-14 17:57:00,159 - INFO - ARI Score: 0.9799
+2025-08-14 17:57:00,165 - INFO - Silhouette Score: 0.4714
+2025-08-14 17:57:00,167 - INFO - Optimal k (silhouette): 2
+2025-08-14 17:57:00,167 - INFO - Clustering analysis completed successfully!
+2025-08-14 17:57:00,168 - INFO - Clustering analysis completed successfully!
+2025-08-14 17:57:00,168 - INFO - Check the 'images', 'reports', and 'data' directories for outputs

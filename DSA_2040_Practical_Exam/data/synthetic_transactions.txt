@@ -1,0 +1,43 @@
+# Synthetic Transactional Data for DSA 2040 Practical Exam
+# Generated 40 transactions
+
+Transaction_1: carrots,bananas,diapers,beer
+Transaction_2: carrots,yogurt,sugar,eggs,milk
+Transaction_3: bananas,coffee,diapers,yogurt,beef
+Transaction_4: chicken,yogurt,beer
+Transaction_5: tomatoes,apples,eggs,pasta,coffee
+Transaction_6: apples,tomatoes,yogurt,bananas,diapers,beer,milk,coffee
+Transaction_7: yogurt,apples,rice,chicken,carrots,sugar,beer
+Transaction_8: carrots,beef,beer,tea,chicken,milk,diapers
+Transaction_9: rice,milk,apples,bread,chicken,beer,pasta,cheese
+Transaction_10: apples,cheese,potatoes,chicken,rice,yogurt,bananas
+Transaction_11: pasta,tomatoes,cheese,bananas,milk,onions,sugar,diapers
+Transaction_12: bananas,carrots,bread,eggs,beer
+Transaction_13: apples,rice,diapers,potatoes,beef,chicken,beer
+Transaction_14: beer,cheese,bread,onions,rice,apples
+Transaction_15: bread,milk,beef
+Transaction_16: eggs,beef,diapers,beer
+Transaction_17: eggs,chicken,yogurt,carrots,apples,beer,milk,pasta
+Transaction_18: bread,sugar,yogurt,beef,apples,bananas,milk
+Transaction_19: beer,chicken,rice
+Transaction_20: rice,cheese,chicken
+Transaction_21: yogurt,bananas,beer,chicken,cheese
+Transaction_22: chicken,bananas,apples,beer,coffee,yogurt,sugar
+Transaction_23: rice,bananas,bread,milk,beef
+Transaction_24: beer,eggs,carrots,milk,bread,sugar
+Transaction_25: cheese,bread,eggs,apples,tea,rice
+Transaction_26: bread,onions,cheese
+Transaction_27: onions,carrots,eggs,yogurt,milk,bread,apples
+Transaction_28: chicken,milk,yogurt,beef,tea,onions,eggs,rice
+Transaction_29: bananas,milk,potatoes
+Transaction_30: cheese,tea,rice,bread,yogurt
+Transaction_31: tomatoes,eggs,tea,onions,yogurt
+Transaction_32: potatoes,tomatoes,beef,beer,milk,bread,chicken
+Transaction_33: milk,potatoes,bananas,apples,beer
+Transaction_34: rice,bananas,bread,beer,carrots,diapers,beef,milk
+Transaction_35: apples,potatoes,cheese,coffee,beef,bread,diapers
+Transaction_36: beer,chicken,eggs,carrots,rice,yogurt,apples,milk
+Transaction_37: bananas,rice,tea,tomatoes,cheese,onions,milk
+Transaction_38: cheese,onions,bananas,yogurt,apples,sugar,tomatoes,tea
+Transaction_39: potatoes,apples,beer,milk
+Transaction_40: bread,potatoes,sugar,tea

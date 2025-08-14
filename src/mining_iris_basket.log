@@ -1,0 +1,41 @@
+2025-08-14 18:02:12,922 - INFO - Starting complete association rule mining analysis
+2025-08-14 18:02:12,924 - INFO - Loading transactional data from ../data/synthetic_transactions.csv
+2025-08-14 18:02:12,928 - WARNING - Data file not found: ../data/synthetic_transactions.csv
+2025-08-14 18:02:12,928 - INFO - Generating synthetic transactional data...
+2025-08-14 18:02:12,932 - INFO - Generating synthetic transactional data
+2025-08-14 18:02:12,963 - INFO - Generated 50 synthetic transactions
+2025-08-14 18:02:12,963 - INFO - Preparing data for association rule mining
+2025-08-14 18:02:12,963 - INFO - Data encoded successfully: (50, 20)
+2025-08-14 18:02:12,971 - INFO - Number of unique items: 20
+2025-08-14 18:02:12,971 - INFO - Applying Apriori algorithm with min_support=0.2
+2025-08-14 18:02:12,990 - INFO - Found 19 frequent itemsets
+2025-08-14 18:02:13,003 - INFO - Generating association rules with min_confidence=0.5
+2025-08-14 18:02:13,033 - INFO - Generated 2 association rules
+2025-08-14 18:02:13,043 - INFO - Displaying top 10 association rules
+2025-08-14 18:02:13,061 - INFO - Creating support distribution chart
+2025-08-14 18:02:17,349 - INFO - Support distribution chart saved to: ../images/support_distribution_chart.png
+2025-08-14 18:02:20,219 - INFO - Creating lift vs confidence scatter plot
+2025-08-14 18:02:26,374 - INFO - Lift vs confidence scatter plot saved to: ../images/lift_confidence_scatter.png
+2025-08-14 18:02:33,513 - INFO - Creating top 10 rules chart
+2025-08-14 18:02:38,790 - INFO - Top rules chart saved to: ../images/top_rules_chart.png
+2025-08-14 18:02:44,889 - INFO - Analyzing rule implications
+2025-08-14 18:02:44,901 - ERROR - Error during analysis: 'charmap' codec can't encode character '\u2192' in position 370: character maps to <undefined>
+2025-08-14 18:02:44,903 - WARNING - Association rule mining failed
+2025-08-14 18:07:39,929 - INFO - Starting complete association rule mining analysis
+2025-08-14 18:07:39,931 - INFO - Loading transactional data from ../data/synthetic_transactions.csv
+2025-08-14 18:07:39,960 - INFO - Data loaded successfully: (50, 2)
+2025-08-14 18:07:39,963 - INFO - Preparing data for association rule mining
+2025-08-14 18:07:39,967 - INFO - Data encoded successfully: (50, 35)
+2025-08-14 18:07:39,972 - INFO - Number of unique items: 35
+2025-08-14 18:07:39,972 - INFO - Applying Apriori algorithm with min_support=0.2
+2025-08-14 18:09:38,656 - INFO - Found 2216831 frequent itemsets
+2025-08-14 18:09:39,529 - INFO - Generating association rules with min_confidence=0.5
+2025-08-14 18:18:45,525 - INFO - Starting complete association rule mining analysis
+2025-08-14 18:18:45,525 - INFO - Loading transactional data from ../data/synthetic_transactions.csv
+2025-08-14 18:18:45,559 - INFO - Data loaded successfully: (50, 2)
+2025-08-14 18:18:45,565 - INFO - Preparing data for association rule mining
+2025-08-14 18:18:45,578 - INFO - Data encoded successfully: (50, 35)
+2025-08-14 18:18:45,578 - INFO - Number of unique items: 35
+2025-08-14 18:18:45,580 - INFO - Applying Apriori algorithm with min_support=0.4
+2025-08-14 18:18:53,072 - INFO - Found 106111 frequent itemsets
+2025-08-14 18:18:53,127 - INFO - Generating association rules with min_confidence=0.7

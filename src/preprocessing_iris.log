@@ -1,0 +1,66 @@
+2025-08-14 17:51:47,815 - INFO - Starting full preprocessing pipeline
+2025-08-14 17:51:47,817 - INFO - === LOADING PHASE ===
+2025-08-14 17:51:47,817 - INFO - Loading synthetic Iris dataset
+2025-08-14 17:51:47,817 - INFO - Generating 150 synthetic Iris-like samples
+2025-08-14 17:51:47,835 - INFO - Generated synthetic data with 150 samples
+2025-08-14 17:51:47,838 - INFO - Data loaded successfully: (150, 5)
+2025-08-14 17:51:47,838 - INFO - Columns: ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
+2025-08-14 17:51:47,858 - INFO - === MISSING VALUES CHECK ===
+2025-08-14 17:51:47,860 - INFO - Checking for missing values
+2025-08-14 17:51:47,868 - INFO - Missing values summary:
+2025-08-14 17:51:47,868 - INFO -          Column  Missing_Count  Missing_Percentage
+0  sepal_length              0                 0.0
+1   sepal_width              0                 0.0
+2  petal_length              0                 0.0
+3   petal_width              0                 0.0
+4       species              0                 0.0
+2025-08-14 17:51:48,000 - INFO - === MISSING VALUES HANDLING ===
+2025-08-14 17:51:48,000 - INFO - Handling missing values
+2025-08-14 17:51:48,000 - INFO - No missing values found in the dataset
+2025-08-14 17:51:48,006 - INFO - Missing values handled: 0 values processed
+2025-08-14 17:51:48,008 - INFO - === EXPLORATION PHASE ===
+2025-08-14 17:51:48,008 - INFO - Starting data exploration
+2025-08-14 17:51:48,008 - INFO - Computing summary statistics
+2025-08-14 17:51:48,091 - INFO - Summary statistics:
+2025-08-14 17:51:48,108 - INFO -        sepal_length  sepal_width  petal_length  petal_width
+count    150.000000   150.000000    150.000000   150.000000
+mean       5.830018     3.088958      3.727648     1.182500
+std        0.716786     0.479965      1.764826     0.729451
+min        4.482517     2.019165      0.268720    -0.087887
+25%        5.107798     2.714999      1.742920     0.391863
+50%        5.952505     3.048804      4.330630     1.302856
+75%        6.406757     3.408853      5.204768     1.862790
+max        7.221262     4.485297      6.947074     2.386018
+2025-08-14 17:51:48,562 - INFO - Species distribution:
+2025-08-14 17:51:48,632 - INFO - species
+setosa        50
+versicolor    50
+virginica     50
+Name: count, dtype: int64
+2025-08-14 17:51:48,743 - INFO - Creating visualizations
+2025-08-14 17:51:48,769 - INFO - Creating pairplot
+2025-08-14 17:52:16,863 - INFO - Creating correlation heatmap
+2025-08-14 17:52:20,475 - INFO - Creating boxplots for outlier detection
+2025-08-14 17:52:26,940 - INFO - Creating histograms
+2025-08-14 17:52:33,555 - INFO - All visualizations created and saved
+2025-08-14 17:52:33,561 - INFO - === NORMALIZATION PHASE ===
+2025-08-14 17:52:33,563 - INFO - Normalizing features using Min-Max scaling
+2025-08-14 17:52:33,572 - INFO - Feature normalization completed
+2025-08-14 17:52:33,572 - INFO - Normalized data shape: (150, 5)
+2025-08-14 17:52:33,572 - INFO - === DATA SPLITTING ===
+2025-08-14 17:52:33,574 - INFO - Splitting data: 80% train, 20% test
+2025-08-14 17:52:33,595 - INFO - Training set: 120 samples
+2025-08-14 17:52:33,595 - INFO - Testing set: 30 samples
+2025-08-14 17:52:33,623 - INFO - Train/test data saved to CSV files
+2025-08-14 17:52:33,623 - INFO - === SAVING PHASE ===
+2025-08-14 17:52:33,643 - INFO - Processed data saved to CSV
+2025-08-14 17:52:33,645 - INFO - === PREPROCESSING SUMMARY ===
+2025-08-14 17:52:33,645 - INFO - Raw data shape: (150, 5)
+2025-08-14 17:52:33,647 - INFO - Processed data shape: (150, 5)
+2025-08-14 17:52:33,647 - INFO - Training samples: 120
+2025-08-14 17:52:33,649 - INFO - Testing samples: 30
+2025-08-14 17:52:33,651 - INFO - Features: ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+2025-08-14 17:52:33,653 - INFO - Target classes: ['setosa', 'versicolor', 'virginica']
+2025-08-14 17:52:33,653 - INFO - Preprocessing pipeline completed successfully!
+2025-08-14 17:52:33,653 - INFO - Preprocessing completed successfully!
+2025-08-14 17:52:33,653 - INFO - Check the 'images' and 'data' directories for outputs

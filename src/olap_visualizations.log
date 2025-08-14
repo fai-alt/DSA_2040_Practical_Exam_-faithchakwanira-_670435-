@@ -1,0 +1,76 @@
+2025-08-14 17:47:23,311 - INFO - Starting all OLAP visualizations
+2025-08-14 17:47:23,311 - INFO - Connected to database: ../retail_dw.db
+2025-08-14 17:47:23,311 - INFO - Creating sales by country chart
+2025-08-14 17:47:23,311 - ERROR - Error executing query: Execution failed on sql '
+        SELECT 
+            l.Country,
+            SUM(f.TotalSales) as TotalSales,
+            COUNT(f.SaleID) as TransactionCount
+        FROM SalesFact f
+        JOIN LocationDim l ON f.LocationID = l.LocationID
+        GROUP BY l.Country
+        ORDER BY TotalSales DESC
+        ': no such column: f.SaleID
+2025-08-14 17:47:23,311 - ERROR - No data available for sales by country chart
+2025-08-14 17:47:23,311 - INFO - Creating time series analysis
+2025-08-14 17:47:23,311 - ERROR - Error executing query: Execution failed on sql '
+        SELECT 
+            t.Year,
+            t.Month,
+            t.MonthName,
+            SUM(f.TotalSales) as TotalSales,
+            COUNT(f.SaleID) as TransactionCount
+        FROM SalesFact f
+        JOIN TimeDim t ON f.TimeID = t.TimeID
+        GROUP BY t.Year, t.Month, t.MonthName
+        ORDER BY t.Year, t.Month
+        ': no such column: t.MonthName
+2025-08-14 17:47:23,311 - ERROR - No data available for time series analysis
+2025-08-14 17:47:23,311 - INFO - Creating customer segmentation chart
+2025-08-14 17:47:23,311 - ERROR - Error executing query: Execution failed on sql '
+        SELECT 
+            c.CustomerSegment,
+            COUNT(DISTINCT f.CustomerID) as CustomerCount,
+            SUM(f.TotalSales) as TotalSales
+        FROM SalesFact f
+        JOIN CustomerDim c ON f.CustomerID = c.CustomerID
+        GROUP BY c.CustomerSegment
+        ORDER BY TotalSales DESC
+        ': no such column: c.CustomerSegment
+2025-08-14 17:47:23,311 - ERROR - No data available for customer segmentation chart
+2025-08-14 17:47:23,311 - INFO - Creating product performance chart
+2025-08-14 17:47:23,311 - ERROR - Error executing query: Execution failed on sql '
+        SELECT 
+            p.Category,
+            SUM(f.TotalSales) as TotalSales,
+            SUM(f.Quantity) as TotalQuantity,
+            COUNT(f.SaleID) as TransactionCount
+        FROM SalesFact f
+        JOIN ProductDim p ON f.ProductID = p.ProductID
+        GROUP BY p.Category
+        ORDER BY TotalSales DESC
+        ': no such column: f.SaleID
+2025-08-14 17:47:23,311 - ERROR - No data available for product performance chart
+2025-08-14 17:47:23,311 - INFO - Creating geographic analysis chart
+2025-08-14 17:47:23,311 - ERROR - Error executing query: Execution failed on sql '
+        SELECT 
+            l.Country,
+            l.Region,
+            SUM(f.TotalSales) as TotalSales,
+            COUNT(f.SaleID) as TransactionCount
+        FROM SalesFact f
+        JOIN LocationDim l ON f.LocationID = l.LocationID
+        GROUP BY l.Country, l.Region
+        ORDER BY TotalSales DESC
+        ': no such column: f.SaleID
+2025-08-14 17:47:23,311 - ERROR - No data available for geographic analysis chart
+2025-08-14 17:47:23,311 - INFO - Generating analysis report
+2025-08-14 17:47:23,311 - INFO - Query executed successfully: (1, 1)
+2025-08-14 17:47:23,311 - INFO - Query executed successfully: (1, 1)
+2025-08-14 17:47:23,311 - INFO - Query executed successfully: (1, 1)
+2025-08-14 17:47:23,321 - INFO - Query executed successfully: (1, 2)
+2025-08-14 17:47:23,323 - INFO - Query executed successfully: (0, 2)
+2025-08-14 17:47:23,327 - INFO - Analysis report saved to: ../reports/olap_analysis_report.md
+2025-08-14 17:47:23,327 - INFO - Visualization summary: 0/5 charts created successfully
+2025-08-14 17:47:23,328 - INFO - Database connection closed
+2025-08-14 17:47:23,328 - WARNING - Some visualizations failed

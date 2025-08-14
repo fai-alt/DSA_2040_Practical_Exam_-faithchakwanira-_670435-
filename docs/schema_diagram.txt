@@ -1,0 +1,79 @@
+DATA WAREHOUSE SCHEMA DIAGRAM
+DSA 2040 Practical Exam - Task 1
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                              STAR SCHEMA DESIGN                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                                    ┌─────────────────┐
+                                    │   SalesFact     │ ← FACT TABLE (Center)
+                                    │   (Measures)    │
+                                    ├─────────────────┤
+                                    │ SaleID (PK)     │
+                                    │ CustomerID (FK) │
+                                    │ ProductID (FK)  │
+                                    │ TimeID (FK)     │
+                                    │ LocationID (FK) │
+                                    │ InvoiceNo       │
+                                    │ Quantity        │
+                                    │ UnitPrice       │
+                                    │ TotalSales      │
+                                    │ Discount        │
+                                    │ NetSales        │
+                                    └─────────────────┘
+                                            │
+                                            │
+                    ┌───────────────────────┼───────────────────────┐
+                    │                       │                       │
+                    ▼                       ▼                       ▼
+            ┌──────────────┐      ┌──────────────┐      ┌──────────────┐
+            │ CustomerDim  │      │  ProductDim  │      │   TimeDim    │
+            │ (Dimension)  │      │ (Dimension)  │      │ (Dimension)  │
+            ├──────────────┤      ├──────────────┤      ├──────────────┤
+            │ CustomerID   │      │ ProductID    │      │ TimeID       │
+            │ CustomerName │      │ ProductName  │      │ Date         │
+            │ Country      │      │ Category     │      │ DayOfWeek    │
+            │ Region       │      │ SubCategory  │      │ Month        │
+            │ Segment      │      │ Brand        │      │ Quarter      │
+            │ RegDate      │      │ UnitPrice    │      │ Year         │
+            │ TotalPurch   │      │ Cost         │      │ IsHoliday    │
+            │ AvgOrderVal  │      │ Supplier     │      │ FiscalYear   │
+            └──────────────┘      │ StockCode    │      └──────────────┘
+                                  │ Description  │
+                                  └──────────────┘
+                                          │
+                                          ▼
+                                  ┌──────────────┐
+                                  │ LocationDim  │
+                                  │ (Dimension)  │
+                                  ├──────────────┤
+                                  │ LocationID   │
+                                  │ Country      │
+                                  │ City         │
+                                  │ Region       │
+                                  │ Population   │
+                                  │ GDP          │
+                                  └──────────────┘
+
+SCHEMA CHARACTERISTICS:
+• Star Schema Design - Optimal for analytical queries
+• 1 Fact Table (SalesFact) - Contains business measures
+• 4 Dimension Tables - Customer, Product, Time, Location
+• Foreign Key Relationships - Maintains referential integrity
+• Strategic Indexing - Optimizes query performance
+• Denormalized Structure - Fast aggregations and analysis
+
+BUSINESS BENEFITS:
+• Fast analytical query performance
+• Simple and intuitive structure
+• Easy maintenance and modification
+• Supports complex business intelligence
+• Scalable for growing data volumes
+• Business-user friendly queries
+
+DESIGN RATIONALE:
+• Chosen over normalized schemas for analytical performance
+• Balances simplicity with functionality
+• Follows data warehousing best practices
+• Enables self-service business intelligence
+• Supports retail business requirements
